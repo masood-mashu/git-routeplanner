@@ -1,14 +1,18 @@
-name: "dispatch-window-solver"
+name: dispatch-window-solver
+version: 1.0.0
 description: "Verifies that scheduled stop arrival times fall within customer receiving hours"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "dispatch_window_solver.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     windows_json:
-      type: "string"
+      type: string
       description: "JSON list of stops with arrival_hour, open_hour, close_hour"
   required:
-    - "windows_json"
+    - windows_json
+implementation:
+  type: script
+  path: dispatch_window_solver.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

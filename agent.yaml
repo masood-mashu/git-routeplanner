@@ -1,16 +1,30 @@
 spec_version: "0.1.0"
-name: "git-routeplanner"
-version: "0.1.0"
+name: git-routeplanner
+version: 1.0.0
 description: "Autonomous Commercial Fleet Route Planning, Delivery Window & Axle Weight Balancing Agent"
-framework: "opengap"
-authors:
-  - name: "masood-mashu"
-    email: "masoodmashu03@gmail.com"
+author: "masood-mashu"
 license: "Apache-2.0"
 
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - commercial-fleet-dispatch
+  - dot-weight-distribution
+
+tools:
+  - dispatch-window-solver
+  - fuel-idle-minimizer
+  - payload-weight-balancer
+
 runtime:
-  language: "python"
-  version: ">=3.10"
+  max_turns: 50
   timeout: 120
 
 tags:
