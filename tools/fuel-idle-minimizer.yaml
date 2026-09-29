@@ -1,0 +1,14 @@
+name: "fuel-idle-minimizer"
+description: "Computes estimated fuel savings from optimized stop sequencing and avoiding left turns"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "fuel_idle_minimizer.py"
+parameters:
+  type: "object"
+  properties:
+    route_stops_json:
+      type: "string"
+      description: "JSON with stop_count and total_miles"
+  required:
+    - "route_stops_json"

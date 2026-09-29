@@ -1,0 +1,14 @@
+name: "payload-weight-balancer"
+description: "Verifies steer, drive, and trailer tandem axle weights against 80,000 lb GVWR limit"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "payload_weight_balancer.py"
+parameters:
+  type: "object"
+  properties:
+    axle_weights_json:
+      type: "string"
+      description: "JSON with steer_lbs, drive_lbs, tandem_lbs"
+  required:
+    - "axle_weights_json"

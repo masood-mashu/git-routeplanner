@@ -1,0 +1,25 @@
+spec_version: "0.1.0"
+name: "git-routeplanner"
+version: "0.1.0"
+description: "Autonomous Commercial Fleet Route Planning, Delivery Window & Axle Weight Balancing Agent"
+framework: "opengap"
+authors:
+  - name: "masood-mashu"
+    email: "masoodmashu03@gmail.com"
+license: "Apache-2.0"
+
+runtime:
+  language: "python"
+  version: ">=3.10"
+  timeout: 120
+
+tags:
+  - supply-chain
+  - route-planning
+  - fleet-logistics
+  - delivery-optimization
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-routeplanner-01"
+  passport_category: "Manufacturing & supply chain"

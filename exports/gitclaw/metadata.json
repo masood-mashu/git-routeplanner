@@ -1,0 +1,13 @@
+{
+  "format": "gitclaw",
+  "agent": "git-routeplanner",
+  "title": "GitRoutePlanner",
+  "category": "Manufacturing & supply chain",
+  "version": "0.1.0",
+  "visa_status": "EARNED",
+  "checkpoint_support": [
+    "01",
+    "02",
+    "03"
+  ]
+}

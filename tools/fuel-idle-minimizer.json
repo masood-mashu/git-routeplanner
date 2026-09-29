@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "minimize_fuel_idling",
+  "description": "Computes estimated fuel savings from optimized stop sequencing and avoiding left turns",
+  "type": "object",
+  "properties": {
+    "route_stops_json": {
+      "type": "string",
+      "description": "JSON with stop_count and total_miles"
+    }
+  },
+  "required": [
+    "route_stops_json"
+  ]
+}

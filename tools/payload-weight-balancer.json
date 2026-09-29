@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "balance_payload_weight",
+  "description": "Verifies steer, drive, and trailer tandem axle weights against 80,000 lb GVWR limit",
+  "type": "object",
+  "properties": {
+    "axle_weights_json": {
+      "type": "string",
+      "description": "JSON with steer_lbs, drive_lbs, tandem_lbs"
+    }
+  },
+  "required": [
+    "axle_weights_json"
+  ]
+}
